@@ -1,0 +1,61 @@
+{
+  "name": "fat_wallet",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Paul Rodriguez"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/paulrodriguez/fat-wallet-rails",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "1.0.0",
+    "bootstrap": "^3.3.7",
+    "moment": "2.5.0",
+    "d3": "~3.4.9",
+    "leaflet": "~0.7.3",
+    "underscore": "~1.6.0",
+    "mustache": "~0.8.2",
+    "jquery-ujs": "~1.0.0",
+    "fontawesome": "3.2.1",
+    "jquery": "2.0.3",
+    "bootstrap-datepicker": "~1.2.0",
+    "jquery-Mustache": "~0.2.7",
+    "leaflet.markercluster": "~0.4.0",
+    "modernizr": "~2.8.3"
+  },
+  "devDependencies": {
+    "jasmine-jquery": "2.0.5",
+    "sinon": "http://sinonjs.org/releases/sinon-1.10.3.js"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "javascripts": "js/*.js",
+      "stylesheets": "css/*.css",
+      "less": "less/*.less",
+      "images": "img/*.png"
+    },
+    "backbone": {
+      "javascripts": "backbone.js"
+    },
+    "d3": {
+      "javascripts": "d3.js"
+    },
+    "fontawesome": {
+      "stylesheets": "css/*.css",
+      "less": "less/*.less",
+      "fonts": "font/*"
+    },
+    "leaflet.markercluster": {
+      "stylesheets": "dist/*.css",
+      "javascripts": "dist/*.js",
+      "fonts": "font/*"
+    }
+  }
+}
