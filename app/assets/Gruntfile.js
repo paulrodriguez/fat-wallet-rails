@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 
         // configure paths for grunt plugins
         paths: {
-            
+
             assets: '../../vendor/assets',
             tests: 'tests',
 
@@ -31,24 +31,11 @@ module.exports = function (grunt) {
 
     });
 
+    // load all npm grunt plugins
+    require('load-grunt-tasks')(grunt);
     // load grunt plugins from directory
     grunt.loadTasks('grunt_tasks');
 
-    grunt.registerTask('prep',
-        'Prepare project assets',
-        ['clean:nuke', 'bower', 'jshint', 'browserify', 'less', 'concat', 'copy', 'newer:imagemin', 'jasmine:ci']
-    );
-
-    grunt.registerTask('dev',
-        'Prepare project assets',
-        ['prep', 'watch']
-    );
-
-    grunt.registerTask('prod',
-        'Prepare project assets',
-        ['prep', 'cssmin', 'uglify', 'clean:prod']
-    );
-
-    grunt.registerTask('default', ['prep', 'dev', 'prod']);
+    grunt.registerTask("libraries",["env:build","browserify"]);
 
 };
