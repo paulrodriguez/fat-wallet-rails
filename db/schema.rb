@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170305213243) do
+ActiveRecord::Schema.define(version: 20170527234139) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",      limit: 100
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(version: 20170305213243) do
     t.string   "password",   limit: 200
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "salt"
+    t.index ["email"], name: "index_users_on_email", using: :btree
+    t.index ["username"], name: "index_users_on_username", using: :btree
   end
 
 end
