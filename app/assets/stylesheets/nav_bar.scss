@@ -1,0 +1,50 @@
+$mobile_menu_width: 10em;
+
+@media screen and (max-width:767px) {
+  .open-nav-bar {
+    position: fixed;
+    left:0;
+    cursor: pointer;
+    background: gray;
+    top: 0;
+    padding: 5px;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .close-nav-bar {
+    padding:5px 18px;
+    cursor: pointer;
+  }
+
+
+  .fw-nav-bar.pure-menu-horizontal{
+    white-space: normal;
+    width: $mobile_menu_width;
+    position: fixed;
+    height: 100%;
+    background: black;
+    top: 0;
+    left: -#{$mobile_menu_width};
+
+    transition: all 0.3s ease;
+
+    &.fw-nav-bar-open {
+      left:0;
+
+      .open-nav-bar {
+        left:$mobile_menu_width;
+      }
+    }
+
+  }
+  .pure-menu-list {
+    .pure-menu-item {
+      width:100%;
+    }
+  }
+}

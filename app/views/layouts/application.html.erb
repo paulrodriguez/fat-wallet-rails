@@ -3,12 +3,15 @@
   <head>
     <title>FatWallet</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'https://unpkg.com/purecss@0.6.2/build/pure-min.css', integrity: "sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD", crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag    'application', "https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= render template: "layouts/header" %>
+    <section class="content">
+      <%= yield %>
+    </section>
   </body>
 </html>

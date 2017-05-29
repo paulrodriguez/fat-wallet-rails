@@ -61,13 +61,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def login
-
-  end
-
-  def logout
-
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

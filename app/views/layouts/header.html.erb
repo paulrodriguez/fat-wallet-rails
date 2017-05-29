@@ -1,0 +1,21 @@
+<header>
+<div>Fat Wallet</div>
+</header>
+
+<nav class="pure-menu pure-menu-horizontal fw-nav-bar pure-menu-scrollable">
+  <div class="open-nav-bar hide-mobile">Open</div>
+  <ul class="pure-menu-list">
+    <li class="pure-menu-item text-right color-white">
+      <div class="close-nav-bar">X</div>
+    </li>
+    <li class="pure-menu-item">
+      <%= link_to "Login", login_path, class: "pure-menu-link" %>
+    </li>
+    <li class="pure-menu-item">
+      <%= link_to "Register", register_path, class: "pure-menu-link" %>
+    </li>
+    <li class="pure-menu-item">
+      <%= link_to "About", about_path, class: "pure-menu-link" %>
+    </li>
+  </ul>
+</nav>

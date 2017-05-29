@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170527234139) do
+ActiveRecord::Schema.define(version: 20170528013745) do
+
+  create_table "transactions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "transaction_date"
+    t.decimal  "grand_total",      precision: 10, scale: 2
+    t.decimal  "subtotal",         precision: 10, scale: 2
+    t.decimal  "tax_total",        precision: 10, scale: 2
+    t.decimal  "discount_total",   precision: 10, scale: 2
+    t.decimal  "tax_rate",         precision: 10, scale: 2
+    t.integer  "user_id"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.index ["user_id"], name: "index_transactions_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",      limit: 100

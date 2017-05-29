@@ -1,0 +1,21 @@
+<%= form_tag({controller: "index", action: "login"}, method: "post",
+class: "pure-form pure-form-aligned") do %>
+<% if !error.nil? %>
+<div id="error_explanation">
+  <h2><%= error %></h2>
+</div>
+<% end %>
+<fieldset>
+  <div class="pure-control-group">
+<%= label_tag(:username, "Username:") %>
+ <%= text_field_tag(:username) %>
+ </div>
+ <div class="pure-control-group">
+   <%= label_tag(:password, "Password:") %>
+    <%= password_field_tag(:password) %>
+ </div>
+ <div class="pure-controls">
+ <%= button_tag("Search", type: "submit", class: "pure-button pure-button-primary") %>
+ </div>
+ </fieldset>
+<% end %>
